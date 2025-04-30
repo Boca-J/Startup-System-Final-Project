@@ -34,7 +34,7 @@ export default async function DiscoverPage() {
         <main className="py-8 px-4">
             <section className="container mx-auto">
                 <h1 className="text-2xl font-bold mb-6">My Blogs</h1>
-                <BlogList blogs={blogs} />
+                <BlogList blogs={blogs} display={false}/>
             </section>
         </main>
     )

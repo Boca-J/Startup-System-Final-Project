@@ -13,7 +13,7 @@ import {createBlog} from "@/actions/blogs"
 import { BlogItem } from "./BlogItem"
 
 type CreateBlogState = { error: string } | { success: boolean }
-export function BlogList({ blogs }: { blogs: Blog[] }) {
+export function BlogList({ blogs, display }: { blogs: Blog[], display: boolean }) {
 
     const [optimisticBlogs, addOptimisticBlogs] = useOptimistic(blogs, (state: Blog[], newBlog: Blog) => [
         ...state,
@@ -52,7 +52,7 @@ export function BlogList({ blogs }: { blogs: Blog[] }) {
 
     return (
         <div className="space-y-4">
-            <form className="flex flex-col gap-2 items-stretch" action={handleSubmit} >
+            {display && <form className="flex flex-col gap-2 items-stretch" action={handleSubmit} >
                 <Input
                     name="title"
                     placeholder={"Add a new blog..."}
@@ -70,7 +70,8 @@ export function BlogList({ blogs }: { blogs: Blog[] }) {
                         {isPending ? "Adding..." : "Add"}
                     </Button>
                 </div>
-            </form>
+            </form>}
+            
             {/* {state?.error && (
                 <p className="text-red-500 text-sm">{state.error}</p>
             )} */}

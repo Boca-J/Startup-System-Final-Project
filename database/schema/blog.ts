@@ -7,11 +7,11 @@ import { z } from "zod"
 
 export const blogs = pgTable("blogs", {
     id: uuid("id").primaryKey().defaultRandom(),
-    title: text("title").notNull(), // optional but recommended for display
+    title: text("title").notNull(), 
     content: text("content").notNull(),
     userId: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
-    tags: text("tags").array(), // assuming you're storing tags as string[]
-    likes: integer("likes").default(0), // optional
+    tags: text("tags").array(),
+    likes: integer("likes").default(0), 
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at").defaultNow().notNull(),
   })
