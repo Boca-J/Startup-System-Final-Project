@@ -17,7 +17,7 @@ export default function Home() {
         </h1>
         <p className="text-gray-600 text-lg">
           A supportive space to share your thoughts, emotions, and personal stories.
-          You're not alone—your voice matters here.
+          You are not alone—your voice matters here.
         </p>
         <Link href="/blogs">
           <button className="mt-4 rounded-lg bg-blue-500 px-6 py-2 text-white hover:bg-blue-600 transition">

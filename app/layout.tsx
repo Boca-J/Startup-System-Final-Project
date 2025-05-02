@@ -24,7 +24,7 @@ export default function RootLayout({
                             {children}
                         </main>
                         <footer className="text-center text-sm text-gray-500 py-4">
-                            You're not alone. 💛 Share your voice with compassion.
+                            You are not alone. 💛 Share your voice with compassion.
                         </footer>
                     </div>
                 </Providers>
