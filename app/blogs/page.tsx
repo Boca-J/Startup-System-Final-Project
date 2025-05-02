@@ -1,7 +1,7 @@
 import { blogs as blogsTable, Blog } from "@/database/schema"
 import { auth } from "@/lib/auth"
 import { headers } from "next/headers"
-import { eq } from "drizzle-orm"
+import { eq, desc } from "drizzle-orm"
 
 import { db } from "@/database/db"
 import { BlogList } from "@/components/BlogList"
@@ -30,6 +30,7 @@ export default async function BlogsPage() {
       .select()
       .from(blogsTable)
       .where(eq(blogsTable.userId, session.user.id))
+      .orderBy(desc(blogsTable.createdAt))
   
 
     return (

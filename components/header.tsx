@@ -10,7 +10,7 @@ export async function Header() {
             <div className="container mx-auto flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <Link href="/" className="flex items-center gap-2">
-                        CS 5356 – Final Project
+                        Mind Universe
                     </Link>
                     <nav className="flex items-center gap-2">
                         <Link href="/blogs">
