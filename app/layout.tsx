@@ -5,8 +5,8 @@ import type { ReactNode } from "react"
 import { Providers } from "./providers"
 
 export const metadata: Metadata = {
-    title: "Better Auth Next.js Starter",
-    description: "Better Auth Next.js Starter with Postgres, Drizzle, shadcn/ui and Tanstack Query"
+    title: "Mindful Journals",
+    description: "A safe space to share thoughts, emotions, and mental health journeys"
 }
 
 export default function RootLayout({
@@ -16,11 +16,16 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className="font-sans antialiased dark">
+            <body className="bg-gradient-to-b from-[#f1f5f9] to-[#e2e8f0] text-gray-800 font-sans antialiased min-h-screen">
                 <Providers>
-                    <div className="flex min-h-svh flex-col">
+                    <div className="flex flex-col min-h-screen">
                         <Header />
-                        {children}
+                        <main className="flex-1 container mx-auto px-4 py-8 max-w-3xl">
+                            {children}
+                        </main>
+                        <footer className="text-center text-sm text-gray-500 py-4">
+                            You're not alone. 💛 Share your voice with compassion.
+                        </footer>
                     </div>
                 </Providers>
             </body>

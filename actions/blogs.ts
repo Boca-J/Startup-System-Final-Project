@@ -100,3 +100,13 @@ export async function unlikeBlog(blogId: string) {
   revalidatePath("/blogs")
   revalidatePath("/discover")
 }
+
+export async function toggleBlogStatus(id: string, currentStatus: string, path: string ) {
+  const newStatus = currentStatus === "public" ? "private" : "public"
+  await db
+    .update(blogs)
+    .set({ status: newStatus, updatedAt: new Date() })
+    .where(eq(blogs.id, id))
+
+  revalidatePath(path)
+}
