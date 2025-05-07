@@ -13,7 +13,7 @@ export default function Home() {
           priority
         />
         <h1 className="text-3xl font-semibold tracking-tight">
-          Welcome to Mindful Journals
+          Welcome to Mind Universe
         </h1>
         <p className="text-gray-600 text-lg">
           A supportive space to share your thoughts, emotions, and personal stories.
@@ -27,7 +27,7 @@ export default function Home() {
       </main>
 
       <footer className="row-start-3 mt-12 text-sm text-gray-500 text-center">
-        Built with compassion 💛 &mdash; Mindful Journals
+        Built with compassion 💛 &mdash; Mind Universe
       </footer>
     </div>
   );

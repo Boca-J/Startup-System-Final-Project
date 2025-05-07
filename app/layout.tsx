@@ -5,7 +5,7 @@ import type { ReactNode } from "react"
 import { Providers } from "./providers"
 
 export const metadata: Metadata = {
-    title: "Mindful Journals",
+    title: "Mind Universe",
     description: "A safe space to share thoughts, emotions, and mental health journeys"
 }
 
