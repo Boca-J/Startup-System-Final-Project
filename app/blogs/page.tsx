@@ -5,6 +5,7 @@ import { eq, desc } from "drizzle-orm"
 
 import { db } from "@/database/db"
 import { BlogList } from "@/components/BlogList"
+import ChatWidget from "@/components/ChatWidget"
 
 export default async function BlogsPage() {
   const session = await auth.api.getSession({
@@ -22,6 +23,7 @@ export default async function BlogsPage() {
     )
   }
 
+
   const blogs = await db
     .select()
     .from(blogsTable)
@@ -38,6 +40,7 @@ export default async function BlogsPage() {
           A space for your thoughts, emotions, and reflections.
         </p>
         <BlogList blogs={blogs} display={true} />
+        <ChatWidget />
       </section>
     </main>
   )

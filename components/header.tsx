@@ -19,6 +19,10 @@ export async function Header() {
                         <Link href="/discover">
                             <Button variant="ghost">Discover</Button>
                         </Link>
+
+                        <Link href="/chatbox">
+                            <Button variant="ghost">AI ChatBox</Button>
+                        </Link>
                         <AdminNavEntry />
                     </nav>
                 </div>
